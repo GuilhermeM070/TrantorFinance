@@ -5,9 +5,10 @@ class Pessoa:
 
 def despesas():
     lista_despesas = []  # Lista para armazenar as despesas
+    valor_final_despesas = 0
 
     while True:
-        entrada = input("\nEscreva suas despesas e valores (ex: Aluguel 1200) ou digite 'sair' para encerrar: ")
+        entrada = input("\nEscreva suas despesas e valores (ex: Aluguel 1200) ou digite 'sair' para encerrar e ver suas despesas: ")
 
         if entrada.lower() == 'sair':
             print("\nEncerrando o programa...\n")
@@ -27,11 +28,10 @@ def despesas():
     for nome, valor in lista_despesas:
         print(f"- {nome}: R$ {valor:.2f}")
 
-    valor_final = sum(valor for _, valor in lista_despesas) # Soma o valor de todas as despesas
-    print(f"\nO valor total das despesas é: R$ {valor_final:.2f}")
-valor_final = despesas()
-# Chamar a função
-despesas()
+    valor_final_despesas = sum(valor for _, valor in lista_despesas) # Soma o valor de todas as despesas
+    print(f"\nO valor total das despesas é: R$ {valor_final_despesas:.2f}")
+
+    return valor_final_despesas # Retorna o valor total das despesas
 
 
 def investimentos():
@@ -79,18 +79,13 @@ def investimentos():
                 print(f"- {ativo}: R$ {valor:.2f}")
 
     return carteira  # Retorna os dados para serem usados na próxima classe
-carteira = investimentos()
-# Chamar a função
-investimentos()
 
 
-def reserva_emergencia(valor_final, carteira):
+def reserva_emergencia(valor_final_despesas, carteira):
     print("\n=== Reserva de Emergência ===")
-    print(f"\nSua Reserva de Emergência equivale a no mínimo 6 meses de despesas mensais.\n")
-    print(f"🔹 Sua reserva deve ser de R$ {valor_final:.2f}\n")
+    print(f"\nSua Reserva de Emergência deve equivaler a no mínimo 6 meses de despesas mensais.")
+    print(f'Suas despesas totais hoje são de R$ {valor_final_despesas:.2f}.')
     print(f"Abaixo está seu plano de reserva de emergência, baseado nos seus ativos de Renda Fixa:\n")
-
-    print(f"🔹 Meta de reserva: R$ {valor_final * 6:.2f}\n")
 
     # Acessando ativos de Renda Fixa dentro da carteira
     renda_fixa = carteira.get("Renda Fixa", [])
@@ -98,10 +93,30 @@ def reserva_emergencia(valor_final, carteira):
     if not renda_fixa:
         print("⚠️ Você não possui ativos de Renda Fixa cadastrados.")
         return
+    
+    # Soma o valor de todos os ativos de Renda Fixa da carteira
+    valor_total_renda_fixa = sum(ativo[1] for ativo in renda_fixa)
 
+    # Exibindo os ativos de Renda Fixa
     print("💰 Seus Ativos de Renda Fixa:")
     for ativo, valor in renda_fixa:
         print(f"- {ativo}: R$ {valor:.2f}")
-# Chamar a função 
-reserva_emergencia(valor_final, carteira)
+        print(f'- Valor Total Investido: R$ {valor_total_renda_fixa:.2f}')
+
+    # Calcula a reserva de emergência
+    res_emergencia = valor_final_despesas * 6
+
+    # Verifica se a reserva de emergência foi atingida
+    if valor_total_renda_fixa >= res_emergencia:
+        print("\n✅ Sua reserva de emergência foi atingida!")
+    else:
+        print("\n⚠️ Sua reserva de emergência ainda não foi atingida.")
+        print(f'Falta R$ {res_emergencia - valor_total_renda_fixa:.2f} para atingir a reserva de emergência.')
+
+
+# Fluxo do programa
+valor_final_despesas = despesas()  # Chama a função despesas e obtém o total
+carteira = investimentos()  # Chama a função investimentos e obtém a carteira
+reserva_emergencia(valor_final_despesas, carteira)  # Chama a função reserva_emergencia
+
 
