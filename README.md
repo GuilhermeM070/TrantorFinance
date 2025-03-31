@@ -1,29 +1,56 @@
-# NeuFin
+<h1 align="center">TrantorFinance 💰 | Organize suas finanças pessoais
+   <br />
+   <img
+      src = "./docs/assets/Slide1.jpg"
+      alt = "TrantorFinance"
+      width = "150"
+   />
 
-NeuFin é uma aplicação de gerenciamento e análise de investimentos financeiros com foco em Inteligência Artificial. O objetivo deste projeto é cadastrar, organizar e gerar relatórios financeiros, prevendo tendências de mercado e analisando volatilidade de ativos. 
+</h1>
 
-Este projeto utiliza tecnologias modernas e pode ser estendido para diferentes tipos de análise financeira e otimização de investimentos, com ênfase no uso de machine learning para previsões.
+<p align="center">
+  <em>Transforme sua vida financeira com eficiência e simplicidade.</em>
+  <br>
+  <strong>Bem-vindo ao projeto TrantorFinance ()!</strong>
+</p>
 
-## Tecnologias Utilizadas
+## Sobre o Projeto
+<p align="center"> 
+  <img src="https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python Badge"> 
+  <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask Badge"> 
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB Badge"> 
+  <img src="https://img.shields.io/badge/OpenAI/Microsoft_Copilot-0A66C2?style=flat-square&logo=openai&logoColor=white" alt="AI Badge"> 
+  <img src="https://img.shields.io/badge/MIT License-333333?style=flat-square&logo=&logoColor=white" alt="MIT Badge"> 
+</p>
 
-- Python 3.x
-- Pandas
-- NumPy
-- TensorFlow/PyTorch (caso esteja integrando IA)
-- Matplotlib/Seaborn (para visualizações)
-- Scikit-learn (para modelos de Machine Learning)
-- SQLite/MySQL/PostgreSQL (banco de dados, conforme necessário)
+- Principais Funcionalidades ->
 
-## Funcionalidades
+💰 Controle completo: Registre despesas, acompanhe investimentos e visualize sua evolução financeira.
 
-- **Cadastro de Ativos:** Permite cadastrar diferentes tipos de ativos financeiros (ações, criptomoedas, renda fixa, FIIs).
-- **Classificação de Ativos:** Os ativos são categorizados e podem ser organizados por tipo e valor.
-- **Relatórios:** Geração de relatórios financeiros detalhados com informações sobre cada ativo, incluindo previsões e volatilidade.
-- **Previsões:** Algoritmos de machine learning para prever tendências de mercado, com base nos dados históricos de cada ativo.
-- **Análise de Volatilidade:** Calcula e exibe a volatilidade de diferentes ativos financeiros.
 
-## Instalação
+📊 Análises interativas: Gráficos dinâmicos para monitorar tendências e otimizar decisões.
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/GuilhermeM070/NeuFin.git
+
+🤖 Inteligência Artificial: Dicas personalizadas baseadas em IA (OpenAI ou Microsoft Copilot) para alinhar seus investimentos ao seu perfil.
+
+
+🚀 Tecnologia de ponta:
+- Backend em Python 3.12 com Flask para APIs leves e eficientes.
+
+- Banco de dados MongoDB, garantindo escalabilidade e flexibilidade.
+
+- IA integrada para recomendações financeiras inteligentes.
+
+
+🌱 Simples, ágil e acessível: Desenvolvido para facilitar o gerenciamento financeiro de qualquer pessoa.
+
+---
+
+## 🛠️ Como Usar
+
+### 1. **Clone o repositório**
+Primeiro, clone o repositório para o seu ambiente local:
+
+```bash
+git clone https://github.com/GuilhermeM070/NeuFin.git
+

@@ -118,5 +118,3 @@ def reserva_emergencia(valor_final_despesas, carteira):
 valor_final_despesas = despesas()  # Chama a função despesas e obtém o total
 carteira = investimentos()  # Chama a função investimentos e obtém a carteira
 reserva_emergencia(valor_final_despesas, carteira)  # Chama a função reserva_emergencia
-
-
