@@ -1,7 +1,7 @@
 <h1 align="center">TrantorFinance 💰 | Organize suas finanças pessoais
    <br />
    <img
-      src = "./docs/assets/Slide1.jpg"
+      src = "./docs/assets/TrantorSlide.jpg"
       alt = "TrantorFinance"
       width = "150"
    />
