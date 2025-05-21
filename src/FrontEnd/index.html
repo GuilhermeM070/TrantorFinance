@@ -1,24 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <style>
+      .Trantor_Centralizado {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 250px;
+      height: 350px;
+    }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         Trantor
     </title>
+    <!--Comando :nth-child(even) estiliza todas as linhas pares da tabela-->
+    <!--Comando tr:hover td estiliza todos os td ao passar o mouse-->
+    <style>
+      table {
+        box-shadow: -23px 24px 28px 7px rgba(0,0,0,0.75);
+        -webkit-box-shadow: -23px 24px 28px 7px rgba(0,0,0,0.75);
+        -moz-box-shadow: -23px 24px 28px 7px rgba(0,0,0,0.75);
+        border: solid 2px rgb(0, 0, 0);
+      }
+      table thead th {
+        background-color: black;
+        color: white;
+      }
+      table tbody :nth-child(even) td{
+        background-color: rgb(255, 255, 255);
+      }
+      table tr:hover td {
+        background-color: rgb(65, 105, 225);
+        cursor: pointer;
+      }
+    </style>
+
 </head>
 <body>
-    <p align="center">
-      Css logo do trantor e css para estilizar o cabeçalho.</br
-      >barra de menu com o trantor azul e preto 
-    </p>
+    <!--Css: logo do trantor e css para estilizar o cabeçalho. Barra de menu com o trantor azul e preto -->
+    <!-- Vamos Colocar o img Logo do Trantor aqui nem que seja com CSS-->
+      <img
+      class="Trantor_Centralizado"
+      title="Trantor Financial Analytics"
+      src="" 
+      alt="Trantor Financial Analytics" 
+      >
+
     <h1 align="center">
         Trantor Financial Analytics
     </h1>
 
-    <p>
-      <blockquote>implementação com css, 3 barras</blockquote>
-    </p>
+    <!--implementação com css, 3 barras-->
     <ul class="menu">
       <li><a class="menuItem" href="#">Perfil</a></li>
       <li><a class="menuItem" href="#">Configurações</a></li>
@@ -26,15 +60,20 @@
     </ul>
 
     <h3 align="center">
-        Bem-vindo ao Trantor Finance =></br
-        > (Login = Nome do Usuario)
+        Bem-vindo ao Trantor Finance</br
+        > Guilherme
     </h3>
 
-    <table align="center" border="1" widght="200" cellpadding="7" cellspacing="4">
-      <tr align="center">
-        <td>Despesas</td>
-        <td>Valores</td>
-      </tr>
+    <!--Vamos Estlizar a Tabela-->
+    <!--Comando colspan="2" mescla duas colunas-->
+    <table align="center" widght="200" cellpadding="7" cellspacing="0">
+      <thead>
+        <tr>
+          <th colspan="2">Controle de Gastos</th>
+        </tr>
+        <th title="Despesas Mensais">Despesas</td>
+        <th title="Valores Variaveis">Valores</td>
+      </thead>
       <tr>
         <td>Internet</td>
         <td>R$ 126,00</td>
@@ -47,15 +86,28 @@
         <td>Cartão MP (Mercado Pago)</td>
         <td>R$ 300</td>
       </tr>
+      <tr>
+        <td>Cartão Nubank</td>
+        <td>R$ 302</td>
+      </tr>
+      <tr>
+        <td>Dentista</td>
+        <td>R$ 1802</td>
+      </tr>
     </table>
 
-    <!-->
-    <table border="1" widght="200" cellpadding="7" cellspacing="4">
-      <tr align="center">
-        
-        <td>Investimentos</td>
-        <td>Valores</td>
-      </tr>
+    <p>
+      </br
+    </p>
+
+    <table align="center" widght="200" cellpadding="7" cellspacing="0">
+      <thead>
+        <tr>
+          <th colspan="2">Rendimentos</th>
+        </tr>
+        <th title="Investimentos Mensais">Investimentos</td>
+        <th title="Valores Variaveis">Valores</td>
+      </thead>
       <tr>
         <td>Açoes BR</td>
         <td>R$ 126,00</td>
@@ -69,7 +121,12 @@
         <td>R$ 300</td>
       </tr>
     </table>
-    <!-->
+    
+    <p>
+      </br
+      </br
+    </p>
+    
 
     
 </body>
